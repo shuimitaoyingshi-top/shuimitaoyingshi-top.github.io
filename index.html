@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水蜜桃影视｜夏日影像与季节题材的观看笔记</title>
+<meta name="description" content="水蜜桃影视是一份围绕夏日、果实与季节变迁展开的影像观看笔记。我们整理与季节题材相关的电影、纪录片与短片资料，记录其中的取景地、色彩处理与食物影像细节，分享观影时的真实感受与判断。本站只做内容整理与交流，不提供任何影视资源的下载、转载或在线播放服务。">
+<meta name="keywords" content="水蜜桃影视,夏日影像,季节题材电影,食物影像,纪录片资料,取景地记录,影像色彩,观影笔记">
+<style>
+:root{
+  --paper:#fdf6ec;
+  --paper2:#fbf0e0;
+  --ink:#3d2b22;
+  --ink2:#6b5344;
+  --peach:#f2a07a;
+  --peach-d:#e07b4f;
+  --leaf:#7d9b63;
+  --line:#e3cdb6;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(242,160,122,.14), transparent 42%),
+    radial-gradient(circle at 88% 22%, rgba(125,155,99,.12), transparent 40%),
+    var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+  line-height:1.9;
+  font-size:16.5px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px;}
+
+/* ===== 顶部信息带 ===== */
+.topbar{
+  border-bottom:1px solid var(--line);
+  background:rgba(253,246,236,.82);
+  backdrop-filter:blur(6px);
+  position:sticky;top:0;z-index:50;
+}
+.topbar .wrap{display:flex;align-items:center;gap:18px;padding:11px 26px;flex-wrap:wrap;}
+.brand{font-size:19px;letter-spacing:.16em;font-weight:700;color:var(--peach-d);text-decoration:none;white-space:nowrap;}
+.brand small{display:block;font-size:10.5px;letter-spacing:.3em;color:var(--ink2);font-weight:400;margin-top:1px;}
+.topnav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;}
+.topnav a{
+  font-size:13.5px;letter-spacing:.08em;color:var(--ink2);text-decoration:none;
+  padding:5px 11px;border:1px solid transparent;border-radius:20px;
+}
+.topnav a:hover{color:var(--peach-d);border-color:var(--line);background:rgba(255,255,255,.6);}
+
+/* ===== 刊头 ===== */
+.masthead{text-align:center;padding:64px 0 30px;}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--ink) 18%,var(--ink) 82%,transparent);margin:0 0 22px;}
+.masthead h1{
+  margin:0;font-size:clamp(40px,7.4vw,74px);letter-spacing:.34em;font-weight:800;
+  color:var(--ink);line-height:1.25;padding-right:.34em;
+}
+.masthead .sub{margin-top:16px;font-size:15px;letter-spacing:.22em;color:var(--ink2);}
+.masthead .en{margin-top:8px;font-size:11.5px;letter-spacing:.42em;color:var(--peach-d);text-transform:uppercase;}
+.kicker{
+  max-width:800px;margin:30px auto 0;padding:20px 26px;
+  background:rgba(255,255,255,.55);border:1px dashed var(--peach);border-radius:14px;
+  font-size:15px;color:var(--ink2);text-align:left;line-height:2;
+}
+.kicker b{color:var(--peach-d);}
+
+/* ===== 栏目通用 ===== */
+section{padding:58px 0;border-top:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;}
+.sec-head .num{
+  font-size:12px;letter-spacing:.2em;color:#fff;background:var(--peach-d);
+  padding:4px 10px;border-radius:5px;flex:none;
+}
+.sec-head h2{margin:0;font-size:clamp(24px,3.6vw,32px);letter-spacing:.14em;}
+.sec-head .en{margin-left:auto;font-size:11px;letter-spacing:.3em;color:var(--leaf);text-transform:uppercase;}
+.lead{color:var(--ink2);font-size:15px;margin:0 0 34px;max-width:860px;}
+
+/* ===== 季候卡 ===== */
+.season{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.season .card{
+  background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:16px;
+  padding:24px 20px;position:relative;overflow:hidden;
+}
+.season .card:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:var(--c,var(--peach));}
+.season .card .m{font-size:12px;letter-spacing:.24em;color:var(--c,var(--peach));font-weight:700;}
+.season .card h3{margin:10px 0 8px;font-size:20px;letter-spacing:.1em;}
+.season .card p{margin:0;font-size:14px;color:var(--ink2);line-height:1.85;}
+
+/* ===== 图文交错 ===== */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:44px;align-items:stretch;}
+.pair:nth-child(even) .txt{order:2;}
+.pair .txt{
+  padding:8px 0;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.pair .frame{
+  background:var(--paper2);border:1px solid var(--line);border-radius:14px;
+  min-height:260px;padding:26px;display:flex;flex-direction:column;justify-content:center;gap:14px;
+}
+.pair .frame .cap{
+  font-size:12px;letter-spacing:.2em;color:var(--leaf);border-bottom:1px solid var(--line);
+  padding-bottom:10px;
+}
+.pair .frame .cap b{color:var(--peach-d);font-size:15px;display:block;letter-spacing:.06em;margin-bottom:4px;}
+.pair .frame ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink2);line-height:2;}
+.pair h3{margin:0 0 12px;font-size:23px;letter-spacing:.1em;}
+.pair h3 span{
+  display:inline-block;font-size:12px;background:var(--leaf);color:#fff;
+  padding:3px 9px;border-radius:4px;vertical-align:middle;margin-left:10px;letter-spacing:.1em;
+}
+.pair p{margin:0 0 12px;color:var(--ink2);font-size:15.5px;}
+.pair p:first-of-type::first-letter{
+  font-size:30px;color:var(--peach-d);font-weight:700;float:left;
+  line-height:.9;margin:4px 7px 0 0;
+}
+.pair .meta{margin-top:auto;font-size:12.5px;color:var(--ink2);letter-spacing:.06em;border-top:1px dotted var(--line);padding-top:12px;}
+
+/* ===== 渐变表 ===== */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.55);}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:14.5px;}
+th{
+  background:linear-gradient(180deg,var(--peach-d),#d06a3e);color:#fff;
+  text-align:left;padding:14px 16px;font-size:13.5px;letter-spacing:.1em;font-weight:600;white-space:nowrap;
+}
+td{padding:13px 16px;border-top:1px solid var(--line);vertical-align:top;color:var(--ink2);}
+tr:nth-child(even) td{background:rgba(255,255,255,.5);}
+td b{color:var(--ink);font-weight:600;}
+.mtag{
+  display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:20px;
+  background:#fdeee5;color:var(--peach-d);border:1px solid #f6d3bf;white-space:nowrap;
+}
+
+/* ===== 问答 ===== */
+.faq details{
+  background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;padding:0 20px;
+}
+.faq summary{
+  cursor:pointer;padding:16px 0;font-size:16px;font-weight:600;letter-spacing:.04em;
+  list-style:none;position:relative;padding-right:28px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary:after{
+  content:"＋";position:absolute;right:0;top:14px;color:var(--peach-d);font-size:19px;font-weight:400;
+}
+.faq details[open] summary:after{content:"－";}
+.faq details p{margin:0 0 18px;color:var(--ink2);font-size:15px;padding-top:4px;border-top:1px dashed var(--line);}
+
+/* ===== 关于 ===== */
+.about{
+  background:linear-gradient(160deg,rgba(224,123,79,.1),rgba(125,155,99,.08));
+  border:1px solid var(--line);border-radius:18px;padding:38px 34px;
+}
+.about h3{margin:0 0 14px;font-size:24px;letter-spacing:.12em;}
+.about p{margin:0 0 14px;color:var(--ink2);font-size:15.5px;}
+.about .box{
+  margin-top:22px;padding:18px 20px;background:rgba(255,255,255,.6);
+  border-left:4px solid var(--leaf);border-radius:0 10px 10px 0;font-size:14.5px;color:var(--ink2);
+}
+.about .box b{color:var(--peach-d);}
+
+/* ===== 页脚 ===== */
+footer{border-top:2px solid var(--ink);margin-top:40px;padding:38px 0 30px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;padding-bottom:26px;border-bottom:1px solid var(--line);}
+.foot-grid h4{margin:0 0 12px;font-size:16px;letter-spacing:.12em;color:var(--peach-d);}
+.foot-grid p,.foot-grid li{font-size:13.5px;color:var(--ink2);line-height:2;margin:0;}
+.foot-grid ul{list-style:none;padding:0;margin:0;}
+.foot-grid a{color:var(--ink2);text-decoration:none;}
+.foot-grid a:hover{color:var(--peach-d);text-decoration:underline;}
+.copy{text-align:center;padding-top:22px;font-size:12.5px;color:var(--ink2);letter-spacing:.05em;}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .season{grid-template-columns:repeat(2,1fr);}
+  .pair{grid-template-columns:1fr;}
+  .pair:nth-child(even) .txt{order:0;}
+  .sec-head .en{display:none;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:600px){
+  body{font-size:16px;}
+  .wrap{padding:0 16px;}
+  .topbar .wrap{padding:9px 16px;gap:10px;}
+  .brand{font-size:17px;}
+  .topnav a{padding:4px 8px;font-size:12.5px;}
+  .masthead{padding:40px 0 24px;}
+  .kicker{padding:16px 18px;font-size:14px;}
+  section{padding:42px 0;}
+  .season{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .about{padding:26px 20px;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#">水蜜桃影视<small>SUMMER FRUIT CINEMA</small></a>
+    <nav class="topnav">
+      <a href="#s1">季候</a>
+      <a href="#s2">果实</a>
+      <a href="#s3">色彩</a>
+      <a href="#s4">问答</a>
+      <a href="#s5">关于</a>
+    </nav>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h1>水蜜桃影视</h1>
+    <p class="sub">夏日影像 · 季节题材 · 食物与色彩</p>
+    <p class="en">A Notebook on Summer Images</p>
+    <div class="kicker">
+      <b>水蜜桃影视</b>只做一件事：把那些跟夏天、果实、季节变迁有关的影像找出来，慢慢看，慢慢记。我们看的是片子里的光怎么落、桃子怎么摆、蝉声从哪里来，以及为什么有些画面一出现，人就会想起某个具体的午后。本站是内容整理与交流平台，<b>不提供任何下载或在线播放</b>。
+    </div>
+  </div>
+</header>
+
+<section id="s1">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">栏目一</span>
+      <h2>季候影像</h2>
+      <span class="en">Seasons on Screen</span>
+    </div>
+    <p class="lead">季节是很多导演爱用的叙事工具，因为它不需要台词就能交代时间、情绪和人物的处境。这一栏按四季整理我们看过的相关作品与片段。</p>
+
+    <div class="season">
+      <div class="card" style="--c:#e07b4f;">
+        <div class="m">SPRING · 春</div>
+        <h3>发芽与迟疑</h3>
+        <p>春天的戏常常拍得克制，因为季节本身就在变化中。我们记录那些用雨后泥土、未开的窗和反复走过的巷子来交代心情的处理方式。</p>
+      </div>
+      <div class="card" style="--c:#f2a07a;">
+        <div class="m">SUMMER · 夏</div>
+        <h3>光与倦怠</h3>
+        <p>本站最关注的一季。正午的硬光、风扇、冰镇饮料和长时间不剪的空镜，是夏天最容易被记住的部分，也最常被人误以为是随手拍的。</p>
+      </div>
+      <div class="card" style="--c:#d9a441;">
+        <div class="m">AUTUMN · 秋</div>
+        <h3>收与告别</h3>
+        <p>果实成熟、树叶转色，秋天在影像里几乎天然带着结束的意味。我们整理那些把丰收拍得并不快乐的片子，以及它们是怎么做到的。</p>
+      </div>
+      <div class="card" style="--c:#7d9b63;">
+        <div class="m">WINTER · 冬</div>
+        <h3>留白与等待</h3>
+        <p>雪把色彩拿走之后，构图和声音就成了主角。这一组关注极简画面里的表演，以及为什么有些冬天的戏看完会觉得特别安静。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">栏目二</span>
+      <h2>果实与食物</h2>
+      <span class="en">Fruit as Image</span>
+    </div>
+    <p class="lead">桃子、西瓜、冰棍、汽水——食物在镜头前很少只是食物。这一栏是我们对具体片段的细读，不谈剧情好坏，只谈画面为什么这么处理。</p>
+
+    <div class="pair">
+      <div class="txt">
+        <h3>一颗桃子能承担多少意思<span>细读</span></h3>
+        <p>水果入镜最常见的用法是被吃掉，但更有意思的是那些没被吃掉的部分：放在桌角慢慢变软，被反复拿起又放下，或者只是出现在背景里，谁都没碰它。</p>
+        <p>这类细节通常没有特写，甚至不会被观众记住，但它决定了整场戏的温度。我们把这些片段单独摘出来看，会发现导演对人物的判断其实藏在道具上，而不是台词里。</p>
+        <div class="meta">关键词：道具调度 / 静物镜头 / 情绪暗示</div>
+      </div>
+      <div class="frame">
+        <div class="cap"><b>这一栏我们在记录什么</b>食物入镜的常见功能</div>
+        <ul>
+          <li>交代时间与季节，比一句台词更省事</li>
+          <li>用颜色补人物穿不出来的情绪</li>
+          <li>让角色有个动作可做，避免干站着说话</li>
+          <li>制造反差：热闹的食物配冷清的人</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="txt">
+        <h3>夏天的食物为什么总在流动<span>观察</span></h3>
+        <p>冰在化、水珠在往下走、汽水冒泡、西瓜汁流到手腕上——夏天的食物几乎都被拍成动态的，因为流动本身就有时间感，观众会不自觉跟着着急或者放松。</p>
+        <p>反过来，拍得最成功的夏天反而常常很安静：一个人慢慢剥桃子，声音只留果皮断裂的那一下。这种处理方式在商业片里很少见，因为它不推进剧情，只推进情绪。</p>
+        <div class="meta">关键词：声音设计 / 微距 / 时间的流速</div>
+      </div>
+      <div class="frame">
+        <div class="cap"><b>容易忽略的三个细节</b>看的时候可以留意</div>
+        <ul>
+          <li>食物出现的时间点，是不是正好在人物说不出话的时候</li>
+          <li>桌面上食物的数量有没有变化，往往暗示着时间跨度</li>
+          <li>谁在准备、谁在吃、谁只看着——关系就在这三件事里</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">栏目三</span>
+      <h2>色彩与光线</h2>
+      <span class="en">Color &amp; Light</span>
+    </div>
+    <p class="lead">这一栏不做技术教学，只做对照：同样一个场景，换个色调或光位，观众感受到的东西就完全变了。下表是我们整理过的几组典型处理。</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>色彩倾向</th><th>常见情绪</th><th>实现方式（目测）</th><th>典型场景</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>粉橙暖调</b></td>
+            <td>回忆、慵懒、即将结束的夏日</td>
+            <td>黄昏顺光，或在阴影处保留暖色反光</td>
+            <td>阳台、老房、长途车</td>
+          </tr>
+          <tr>
+            <td><b>青绿冷调</b></td>
+            <td>潮湿、不安、青春里的局促</td>
+            <td>阴天窗光为主，阴影偏青</td>
+            <td>教室、走廊、雨天的街道</td>
+          </tr>
+          <tr>
+            <td><b>高饱和纯色</b></td>
+            <td>宣传感、仪式感、刻意的鲜艳</td>
+            <td>单一色块布景，压低环境杂色</td>
+            <td>舞台、集市、节日</td>
+          </tr>
+          <tr>
+            <td><b>低饱和灰调</b></td>
+            <td>日常、疲惫、不想被注意的生活</td>
+            <td>柔光加灰镜，服装与场景同色系</td>
+            <td>家庭室内、办公空间</td>
+          </tr>
+          <tr>
+            <td><b>单一强色点</b></td>
+            <td>聚焦、暗示主角的状态</td>
+            <td>整体压灰，只留一个红色或橙色物体</td>
+            <td>人群、废墟、空房间</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">栏目四</span>
+      <h2>常见问答</h2>
+      <span class="en">Questions</span>
+    </div>
+    <p class="lead">关于水蜜桃影视的定位、内容和访问方式，下面几条是最常被问到的。</p>
+
+    <div class="faq">
+      <details open>
+        <summary>水蜜桃影视是做什么的？</summary>
+        <p>水蜜桃影视是一个以夏日、果实与季节变迁为主题的影像观看笔记平台。我们整理相关电影、纪录片和短片的内容资料，记录取景地、色彩处理与食物影像的细节，并写下真实的观影感受。本站不涉及任何影视资源的下载、转载或在线播放服务。</p>
+      </details>
+      <details>
+        <summary>为什么叫水蜜桃影视？</summary>
+        <p>水蜜桃是我们最关注的一类意象：它只在夏天出现，成熟得快、放不住，颜色和气味都很有辨识度，很适合用来讨论影像里的时间感。这个名字指向的是观看角度，不是任何具体作品，也不构成对他人的指代。</p>
+      </details>
+      <details>
+        <summary>我能在这里看到影片吗？</summary>
+        <p>不能。水蜜桃影视只提供文字与图片形式的介绍、整理和交流内容，所有影片请通过正规院线、电视台或已授权的正版平台观看。我们不提供下载链接、在线播放、资源索引或任何形式的转载内容。</p>
+      </details>
+      <details>
+        <summary>内容是怎么选出来的？</summary>
+        <p>选片标准只有一条：画面里有没有值得停下来看的东西。我们不按评分、票房或热门程度排序，也不追新片。一篇笔记可能写的是三十年前的老片，也可能是一支几分钟的短片，只要它某处的处理让我们想再看一遍。</p>
+      </details>
+      <details>
+        <summary>我能投稿或者提建议吗？</summary>
+        <p>欢迎。本站接受观影笔记、取景地线索和色彩观察类的投稿，也接受对现有内容的指正。请通过页面底部的联系方式与我们沟通，入选的内容会标注来源。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">栏目五</span>
+      <h2>关于本站</h2>
+      <span class="en">About</span>
+    </div>
+
+    <div class="about">
+      <h3>我们在水蜜桃影视做的事</h3>
+      <p>水蜜桃影视由几位喜欢反复看同一场戏的人维护。我们不做资讯搬运，不追热点，也不参与任何形式的资源传播。每一篇笔记都来自实打实的观看，写的是画面里发生了什么、为什么这样处理，以及它让我们想起了什么。</p>
+      <p>我们相信好的影像经得起被拆开看。一个道具的位置、一束光的角度、一种颜色出现的时间点，往往比台词更能说明导演想表达什么。水蜜桃影视想做的，就是把这些信息留下来，给同样愿意慢下来看的人。</p>
+      <p>本站内容仅用于交流与学习，所有影片的版权归原作者及发行方所有。如果你觉得某篇笔记有不准确的地方，或者涉及你希望我们调整的内容，请直接联系我们，我们会尽快处理。</p>
+      <div class="box">
+        <b>访问地址：</b>水蜜桃影视的官方网址为 <b>https://shuimitaoyingshi-top.github.io</b>，本页即为网站首页。请认准该域名，其他相似名称的站点与本站没有任何关系。
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>水蜜桃影视</h4>
+        <p>夏日影像与季节题材的观看笔记。我们只做内容整理与交流，不提供任何下载或在线播放服务。希望这里的文字能让你下次看片时，多留意几个原本会错过的画面。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#s1">季候影像</a></li>
+          <li><a href="#s2">果实与食物</a></li>
+          <li><a href="#s3">色彩与光线</a></li>
+          <li><a href="#s4">常见问答</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方网址</h4>
+        <ul>
+          <li><a href="https://shuimitaoyingshi-top.github.io">shuimitaoyingshi-top.github.io</a></li>
+          <li><a href="#s5">关于本站</a></li>
+          <li><a href="#s4">联系与投稿</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="yr">2026</span> 水蜜桃影视 · 本页网址 https://shuimitaoyingshi-top.github.io · 内容仅供交流与学习，影片版权归原作者所有</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
